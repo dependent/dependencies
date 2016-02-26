@@ -5,7 +5,7 @@ A file to define environment dependencies for applications
 
 In a file named `.dependencies` at the root of your project:
 
-```
+```ruby
 ruby: "~> 2.3", file: "Gemfile"
 postgres: "~> 9.3"
 python: "~> 2.7", file: "requirements.txt"
