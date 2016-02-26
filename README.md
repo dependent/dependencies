@@ -68,8 +68,8 @@ to be. Not every machine out there can parse YAML.
 Why a quoted string for the version? Well, because Bundler's format is the best
 version specification format I know of. The string allows for complex
 modifications on the version number. It allows strict versions specifications
-("9.1.3"), open-ended ("> 0.1.0"), ranges ([">= 4.1.0", "< 5.1"]), and even
-loose ones ("~> 9.3" meaning equal or greater than 9.3 but less than 9.4).
+(`"9.1.3"`), open-ended (`"> 0.1.0"`), ranges (`[">= 4.1.0", "< 5.1"]`), and even
+loose ones (`"~> 9.3"` meaning equal or greater than 9.3 but less than 9.4).
 
 ### Integrations
 Finally there's a little bonus, a second value called `file` which hints at 
