@@ -1,0 +1,6 @@
+# This file documents environment dependencies
+
+ruby: "~> 2.3", file: "Gemfile"
+postgres: "~> 9.3"
+python: "~> 2.7", file: "requirements.txt"
+node: "~> 5.5", file: "package.json"
