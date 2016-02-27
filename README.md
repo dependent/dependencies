@@ -17,16 +17,16 @@ system-level dependency documentation.
 In a file named `.dependencies` at the root of your project:
 
 ```ruby
-ruby: "~> 2.3", file: "Gemfile"
-postgres: "~> 9.3"
-python: "~> 2.7", file: "requirements.txt"
-node: "~> 5.5", file: "package.json"
+ruby: "~> 2.3.0", file: "Gemfile"
+postgres: "~> 9.3.0"
+python: "~> 2.7.0", file: "requirements.txt"
+node: "~> 5.5.0", file: "package.json"
 ```
 
 Let's break it down, by focusing on first line:
 
 1. `ruby` is the name of the system-level software being dependend on by your program
-2. `"~> 2.3"` defines the version constraint for the `ruby` dependency, `~>` means "loose" which is equivalent to saying "I want any version including 9.3 and above but below 9.4".
+2. `"~> 2.3.0"` defines the version constraint for the `ruby` dependency, `~>` means "loose" which is equivalent to saying "I want any version including 2.3.0 and above but below 2.4".
 3. `file` is an optional key that allows you to specify where the system-level dependency can find its own dependencies, and in Ruby programs usually document their dependencies using a Bundler `Gemfile`.
 
 ## Why document dependencies in a file?
@@ -61,7 +61,7 @@ it uses a simple key/value format. It does *look* like YAML, but it doesn't need
 to be. Not every machine out there can parse YAML. 
 
 ```ruby
-  postgresql: "~> 9.3"
+  postgresql: "~> 9.3.0"
 ```
 
 ### Versions
@@ -69,7 +69,7 @@ Why a quoted string for the version? Well, because Bundler's format is the best
 version specification format I know of. The string allows for complex
 modifications on the version number. It allows strict versions specifications
 (`"9.1.3"`), open-ended (`"> 0.1.0"`), ranges (`[">= 4.1.0", "< 5.1"]`), and even
-loose ones (`"~> 9.3"` meaning equal or greater than 9.3 but less than 9.4).
+loose ones (`"~> 9.3.0"` meaning equal or greater than 9.3.0 but less than 9.4).
 
 ### Integrations
 Finally there's a little bonus, a second value called `file` which hints at 
